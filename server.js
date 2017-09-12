@@ -9,9 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
+
 app.get('/article-one', function (req, res) {
   res.send("article one is handled here");
 });
@@ -20,6 +18,10 @@ app.get('/article-two', function (req, res) {
 });
 app.get('/article-third', function (req, res) {
   res.send("article third is handled here");
+});
+
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
